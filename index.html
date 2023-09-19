@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <title>Banana Shake</title>
+        <title>Pho-Real: Vietnam on a plate</title>
         <style>
             body
             {
@@ -13,7 +13,7 @@
 
             .figma-embed
             {
-                height:90vh;
+                height:100vh;
                 display: flex;
             }
 
@@ -24,30 +24,85 @@
                 color:white;
             }
 
-            h3
+            .d-none 
             {
-                color: white;
+                display: none;
             }
 
-            p
+            .heading
             {
-                color: white;
+                display: inline-flex;
+                margin-top: 40px;
             }
         </style>
     </head>
 
     <body>
-        <div class="container">
-            <h1>Banana Shake</h1>
+        <nav class="navbar navbar-light bg-light" style="padding-top: 10px; padding-bottom: 10px;">
+            <div class="container">
+              <img src="logo.png" height="60px">
+              <h3 class="d-flex">Pho-Real: Vietnam on a plate</h3>
+            </div>
+        </nav>
 
-            <div class="figma-embed">
-                <iframe class="embed-responsive-item" style="border: 1px solid rgba(0, 0, 0, 0.1);" height="100%" width="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FW3CYe94OB6s5Lyz54rMaPL%2FA3-dms4-hi-fi-prototype-(Copy)%3Ftype%3Ddesign%26node-id%3D717-1567%26t%3Dk9rwtPj0pQUTEPUL-1%26scaling%3Dcontain%26page-id%3D139%253A2%26starting-point-node-id%3D717%253A1567%26mode%3Ddesign" allowfullscreen>
-                </iframe>
+        <div class="container" style="padding-top: 40px;">
+            <div style="text-align: center; padding: 10px;">
+                <h1>GAMEPLAY</h1>
+                <button type="button" class="btn btn-outline-secondary" id="off" onclick="turnOff()">Turn off music</button>
+                <button type="button" class="btn btn-outline-light" id="on" onclick="turnOn()">Turn on music</button>
+                <audio src="sound.mp3" loop id="audio">can not find</audio>
             </div>
 
+            <div class="d-block d-sm-none d-md-none">
+                <p>*Note: Flip your phone to landscape side for playful experience</p>
+            </div>
+
+            <div class="figma-embed">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FW3CYe94OB6s5Lyz54rMaPL%2F%255BDemo%255D-Pho-Real%253A-Vietnam-on-a-Plate%3Fnode-id%3D717-1567%26starting-point-node-id%3D717%253A1567%26scaling%3Dscale-down%26mode%3Ddesign%26t%3DIblt5TqZmN8RMebS-1" allowfullscreen></iframe>            </div>
             <br><br><br>
-            <h3>About</h3>
-            <p>Hehehehehehehehehehehe</p>
         </div>
+
+        <div class="container-fluid" style="background-color: whitesmoke; padding-top: 60px;">
+            <div class="container">
+                <h2>ABOUT</h2>
+                <div class="row">
+                    <div class="col-sm-1 col-md-3 col-lg-5">
+                        <img src="s1.jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+                    <div class="col-sm-1 col-md-7 col-lg-7">
+                        <p>Vietnamese food has been well-known and is gaining more recognition worldwide. However, Vietnamese cuisine's authenticity is fading due to the 
+                        fact that not many people know how to prepare food properly and that certain dishes have fascinating facts may need some time to discover.</p>
+                        <p>Pho-Real: Viet Nam on the Plate is an entertaining single-player 2D cooking game with the ambition of promoting authentic Vietnamese cuisine 
+                        recipes to the players. Come with Pho-Real, the player will be immersed in Vietnamese foodie adventure, learning the recipes and gaining family 
+                        value when experiencing when cooking with family members. </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">col-sm-8</div>
+                    <div class="col-sm-4">col-sm-4</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            
+        </div>
+
+        <script>
+            var x = document.getElementById("audio");
+            function turnOff()
+            {
+                x.autoplay=false;
+                x.load();
+            }
+
+            function turnOn()
+            {
+                x.autoplay=true;
+                x.load();
+            }
+        </script>
+
     </body>
+
 </html>

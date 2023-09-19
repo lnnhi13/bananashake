@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
         <title>Pho-Real: Vietnam on a plate</title>
         <style>
             body
@@ -19,9 +22,19 @@
 
             h1
             {
+                font-family: 'Bebas Neue', sans-serif;
                 text-align: center;
                 padding: 30px;
-                color:white;
+            }
+
+            h2
+            {
+                font-family: 'Bebas Neue', sans-serif;
+            }
+
+            h3
+            {
+                font-family: 'Bebas Neue', sans-serif;
             }
 
             .d-none 
@@ -33,6 +46,28 @@
             {
                 display: inline-flex;
                 margin-top: 40px;
+            }
+
+            .bottom
+            {
+                text-align: center;
+            }
+
+            .bottom p
+            {
+                color: gray;
+                font-size: small;
+            }
+
+            a
+            {
+                text-decoration: none;
+                color: goldenrod;
+            }
+
+            a:hover
+            {
+                color: black;
             }
         </style>
     </head>
@@ -47,14 +82,14 @@
 
         <div class="container" style="padding-top: 40px;">
             <div style="text-align: center; padding: 10px;">
-                <h1>GAMEPLAY</h1>
+                <h1 style="color: white;">GAMEPLAY</h1>
                 <button type="button" class="btn btn-outline-secondary" id="off" onclick="turnOff()">Turn off music</button>
                 <button type="button" class="btn btn-outline-light" id="on" onclick="turnOn()">Turn on music</button>
                 <audio src="sound.mp3" loop id="audio">can not find</audio>
             </div>
 
             <div class="d-block d-sm-none d-md-none">
-                <p>*Note: Flip your phone to landscape side for playful experience</p>
+                <p style="color: gray;">*Note: Flip your phone to landscape side for playful experience</p>
             </div>
 
             <div class="figma-embed">
@@ -62,9 +97,9 @@
             <br><br><br>
         </div>
 
-        <div class="container-fluid" style="background-color: whitesmoke; padding-top: 60px;">
+        <div class="container-fluid" style="background-color: whitesmoke; padding-top: 60px; padding-bottom: 60px;">
             <div class="container">
-                <h2>ABOUT</h2>
+                <h1 style="color: goldenrod;">ABOUT</h1>
                 <div class="row">
                     <div class="col-sm-1 col-md-3 col-lg-5">
                         <img src="s1.jpg" class="img-fluid" alt="Responsive image">
@@ -75,17 +110,23 @@
                         <p>Pho-Real: Viet Nam on the Plate is an entertaining single-player 2D cooking game with the ambition of promoting authentic Vietnamese cuisine 
                         recipes to the players. Come with Pho-Real, the player will be immersed in Vietnamese foodie adventure, learning the recipes and gaining family 
                         value when experiencing when cooking with family members. </p>
+                        <br>
+                        <button type="button" class="btn btn-outline-warning"><a href="" download>DOWNLOAD DESIGN DOCUMENT HERE</a></button>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-8">col-sm-8</div>
-                    <div class="col-sm-4">col-sm-4</div>
                 </div>
             </div>
         </div>
 
-        <div class="container">
-            
+        <div class="container" style="padding: 30px;">
+            <div class="bottom">
+                <p>This project is for study purpose only!</p>
+                <p>©BananaShake - Digital Media Studio 4: Client Solution
+                    <br>s3877214 - Nguyen Yen Nhi
+                    <br>s3926642 - Lieu Phuong Mai
+                    <br>s3927508 - Ly Ngoc Nhi
+                    <br>s3931740 - Do Tu Uyen
+                </p>
+            </div>
         </div>
 
         <script>
